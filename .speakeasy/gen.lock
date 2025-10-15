@@ -5,8 +5,8 @@ management:
   docVersion: 1.0.0
   speakeasyVersion: 1.611.0
   generationVersion: 2.694.1
-  releaseVersion: 0.17.7
-  configChecksum: 1c4dcd1562e4895eefcaed1ace3dbb42
+  releaseVersion: 0.17.8
+  configChecksum: 414d7700edb3cd990a771db02542c20f
   repoURL: https://github.com/epilot-dev/terraform-provider-epilot-target.git
   repoSubDirectory: .
   published: true
