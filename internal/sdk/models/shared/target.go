@@ -43,13 +43,13 @@ type Target struct {
 	// Manifest ID used to create/update the entity
 	Manifest []string `json:"_manifest,omitempty"`
 	// Organization Id the entity belongs to
-	Org       string            `json:"_org"`
-	Owners    []BaseEntityOwner `json:"_owners,omitempty"`
-	Purpose   []string          `json:"_purpose,omitempty"`
-	Schema    Schema            `json:"_schema"`
-	Tags      []string          `json:"_tags,omitempty"`
-	Title     *string           `json:"_title,omitempty"`
-	UpdatedAt *time.Time        `json:"_updated_at,omitempty"`
+	Org       string     `json:"_org"`
+	Owners    any        `json:"_owners,omitempty"`
+	Purpose   []string   `json:"_purpose,omitempty"`
+	Schema    Schema     `json:"_schema"`
+	Tags      []string   `json:"_tags,omitempty"`
+	Title     *string    `json:"_title,omitempty"`
+	UpdatedAt *time.Time `json:"_updated_at,omitempty"`
 	// The description of the target
 	Description *string `json:"description,omitempty"`
 	// The filters on the targeted schema
@@ -120,7 +120,7 @@ func (o *Target) GetOrg() string {
 	return o.Org
 }
 
-func (o *Target) GetOwners() []BaseEntityOwner {
+func (o *Target) GetOwners() any {
 	if o == nil {
 		return nil
 	}

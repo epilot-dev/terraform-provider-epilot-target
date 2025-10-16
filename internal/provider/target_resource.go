@@ -47,7 +47,7 @@ type TargetResourceModel struct {
 	Manifest      []types.String                  `tfsdk:"manifest"`
 	Name          types.String                    `tfsdk:"name"`
 	Org           types.String                    `tfsdk:"org"`
-	Owners        []tfTypes.BaseEntityOwner       `tfsdk:"owners"`
+	Owners        jsontypes.Normalized            `tfsdk:"owners"`
 	Purpose       []types.String                  `tfsdk:"purpose"`
 	Schema        types.String                    `tfsdk:"schema"`
 	Tags          []types.String                  `tfsdk:"tags"`
@@ -155,18 +155,10 @@ func (r *TargetResource) Schema(ctx context.Context, req resource.SchemaRequest,
 				Computed:    true,
 				Description: `Organization Id the entity belongs to`,
 			},
-			"owners": schema.ListNestedAttribute{
-				Computed: true,
-				NestedObject: schema.NestedAttributeObject{
-					Attributes: map[string]schema.Attribute{
-						"org_id": schema.StringAttribute{
-							Computed: true,
-						},
-						"user_id": schema.StringAttribute{
-							Computed: true,
-						},
-					},
-				},
+			"owners": schema.StringAttribute{
+				CustomType:  jsontypes.NormalizedType{},
+				Computed:    true,
+				Description: `Parsed as JSON.`,
 			},
 			"purpose": schema.ListAttribute{
 				Computed:    true,

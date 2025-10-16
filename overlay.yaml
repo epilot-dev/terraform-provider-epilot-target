@@ -40,3 +40,6 @@ actions:
   - target: $["components"]["schemas"]["BaseTarget"]["properties"]["entity_filters"]
     update:
       x-speakeasy-type-override: any
+  - target: $["components"]["schemas"]["BaseSystemReadonlyFields"]["properties"]["_owners"]
+    update:
+      x-speakeasy-type-override: any

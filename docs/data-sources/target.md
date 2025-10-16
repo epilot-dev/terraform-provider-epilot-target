@@ -40,7 +40,7 @@ data "epilot-target_target" "my_target" {
 - `manifest` (List of String) Manifest ID used to create/update the entity
 - `name` (String) The description for the target
 - `org` (String) Organization Id the entity belongs to
-- `owners` (Attributes List) (see [below for nested schema](#nestedatt--owners))
+- `owners` (String) Parsed as JSON.
 - `purpose` (List of String)
 - `schema` (String)
 - `tags` (List of String)
@@ -71,13 +71,3 @@ Read-Only:
 
 - `entity_id` (String)
 - `tags` (List of String)
-
-
-
-<a id="nestedatt--owners"></a>
-### Nested Schema for `owners`
-
-Read-Only:
-
-- `org_id` (String)
-- `user_id` (String)

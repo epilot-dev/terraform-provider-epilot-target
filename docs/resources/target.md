@@ -69,7 +69,7 @@ resource "epilot-target_target" "my_target" {
 - `created_at` (String)
 - `id` (String) The ID of this resource.
 - `org` (String) Organization Id the entity belongs to
-- `owners` (Attributes List) (see [below for nested schema](#nestedatt--owners))
+- `owners` (String) Parsed as JSON.
 - `title` (String)
 - `updated_at` (String)
 
@@ -98,15 +98,6 @@ Read-Only:
 - `delete` (List of String)
 - `edit` (List of String)
 - `view` (List of String)
-
-
-<a id="nestedatt--owners"></a>
-### Nested Schema for `owners`
-
-Read-Only:
-
-- `org_id` (String)
-- `user_id` (String)
 
 ## Import
 

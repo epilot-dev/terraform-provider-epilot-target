@@ -69,15 +69,11 @@ func (r *TargetDataSourceModel) RefreshFromSharedTarget(ctx context.Context, res
 			r.Manifest = append(r.Manifest, types.StringValue(v))
 		}
 		r.Org = types.StringValue(resp.Org)
-		r.Owners = []tfTypes.BaseEntityOwner{}
-
-		for _, ownersItem := range resp.Owners {
-			var owners tfTypes.BaseEntityOwner
-
-			owners.OrgID = types.StringValue(ownersItem.OrgID)
-			owners.UserID = types.StringPointerValue(ownersItem.UserID)
-
-			r.Owners = append(r.Owners, owners)
+		if resp.Owners == nil {
+			r.Owners = jsontypes.NewNormalizedNull()
+		} else {
+			ownersResult, _ := json.Marshal(resp.Owners)
+			r.Owners = jsontypes.NewNormalizedValue(string(ownersResult))
 		}
 		if resp.Purpose != nil {
 			r.Purpose = make([]types.String, 0, len(resp.Purpose))
