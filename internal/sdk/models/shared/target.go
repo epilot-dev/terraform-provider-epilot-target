@@ -44,7 +44,6 @@ type Target struct {
 	Manifest []string `json:"_manifest,omitempty"`
 	// Organization Id the entity belongs to
 	Org       string     `json:"_org"`
-	Owners    any        `json:"_owners,omitempty"`
 	Purpose   []string   `json:"_purpose,omitempty"`
 	Schema    Schema     `json:"_schema"`
 	Tags      []string   `json:"_tags,omitempty"`
@@ -118,13 +117,6 @@ func (o *Target) GetOrg() string {
 		return ""
 	}
 	return o.Org
-}
-
-func (o *Target) GetOwners() any {
-	if o == nil {
-		return nil
-	}
-	return o.Owners
 }
 
 func (o *Target) GetPurpose() []string {

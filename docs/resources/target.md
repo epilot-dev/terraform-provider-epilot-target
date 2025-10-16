@@ -69,7 +69,6 @@ resource "epilot-target_target" "my_target" {
 - `created_at` (String)
 - `id` (String) The ID of this resource.
 - `org` (String) Organization Id the entity belongs to
-- `owners` (String) Parsed as JSON.
 - `title` (String)
 - `updated_at` (String)
 

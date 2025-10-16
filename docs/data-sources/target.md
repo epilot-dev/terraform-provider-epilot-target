@@ -40,7 +40,6 @@ data "epilot-target_target" "my_target" {
 - `manifest` (List of String) Manifest ID used to create/update the entity
 - `name` (String) The description for the target
 - `org` (String) Organization Id the entity belongs to
-- `owners` (String) Parsed as JSON.
 - `purpose` (List of String)
 - `schema` (String)
 - `tags` (List of String)

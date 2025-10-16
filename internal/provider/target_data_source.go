@@ -42,7 +42,6 @@ type TargetDataSourceModel struct {
 	Manifest      []types.String                  `tfsdk:"manifest"`
 	Name          types.String                    `tfsdk:"name"`
 	Org           types.String                    `tfsdk:"org"`
-	Owners        jsontypes.Normalized            `tfsdk:"owners"`
 	Purpose       []types.String                  `tfsdk:"purpose"`
 	Schema        types.String                    `tfsdk:"schema"`
 	Strict        types.Bool                      `queryParam:"style=form,explode=true,name=strict" tfsdk:"strict"`
@@ -139,11 +138,6 @@ func (r *TargetDataSource) Schema(ctx context.Context, req datasource.SchemaRequ
 			"org": schema.StringAttribute{
 				Computed:    true,
 				Description: `Organization Id the entity belongs to`,
-			},
-			"owners": schema.StringAttribute{
-				CustomType:  jsontypes.NormalizedType{},
-				Computed:    true,
-				Description: `Parsed as JSON.`,
 			},
 			"purpose": schema.ListAttribute{
 				Computed:    true,
