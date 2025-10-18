@@ -14,18 +14,18 @@ type PatchTargetRequest struct {
 	TargetID string `pathParam:"style=simple,explode=false,name=targetId"`
 }
 
-func (o *PatchTargetRequest) GetTargetPatch() shared.TargetPatch {
-	if o == nil {
+func (p *PatchTargetRequest) GetTargetPatch() shared.TargetPatch {
+	if p == nil {
 		return shared.TargetPatch{}
 	}
-	return o.TargetPatch
+	return p.TargetPatch
 }
 
-func (o *PatchTargetRequest) GetTargetID() string {
-	if o == nil {
+func (p *PatchTargetRequest) GetTargetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.TargetID
+	return p.TargetID
 }
 
 type PatchTargetResponse struct {
@@ -41,37 +41,37 @@ type PatchTargetResponse struct {
 	Target *shared.Target
 }
 
-func (o *PatchTargetResponse) GetClientError() *shared.ClientError {
-	if o == nil {
+func (p *PatchTargetResponse) GetClientError() *shared.ClientError {
+	if p == nil {
 		return nil
 	}
-	return o.ClientError
+	return p.ClientError
 }
 
-func (o *PatchTargetResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchTargetResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchTargetResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchTargetResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchTargetResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchTargetResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }
 
-func (o *PatchTargetResponse) GetTarget() *shared.Target {
-	if o == nil {
+func (p *PatchTargetResponse) GetTarget() *shared.Target {
+	if p == nil {
 		return nil
 	}
-	return o.Target
+	return p.Target
 }

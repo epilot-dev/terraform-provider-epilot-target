@@ -49,72 +49,72 @@ type TargetCreate struct {
 	Name string `json:"name"`
 }
 
-func (o *TargetCreate) GetAdditional() map[string]any {
-	if o == nil {
+func (t *TargetCreate) GetAdditional() map[string]any {
+	if t == nil {
 		return nil
 	}
-	return o.Additional
+	return t.Additional
 }
 
-func (o *TargetCreate) GetFiles() *BaseRelation {
-	if o == nil {
+func (t *TargetCreate) GetFiles() *BaseRelation {
+	if t == nil {
 		return nil
 	}
-	return o.Files
+	return t.Files
 }
 
-func (o *TargetCreate) GetManifest() []string {
-	if o == nil {
+func (t *TargetCreate) GetManifest() []string {
+	if t == nil {
 		return nil
 	}
-	return o.Manifest
+	return t.Manifest
 }
 
-func (o *TargetCreate) GetPurpose() []string {
-	if o == nil {
+func (t *TargetCreate) GetPurpose() []string {
+	if t == nil {
 		return nil
 	}
-	return o.Purpose
+	return t.Purpose
 }
 
-func (o *TargetCreate) GetSchema() *TargetCreateSchema {
-	if o == nil {
+func (t *TargetCreate) GetSchema() *TargetCreateSchema {
+	if t == nil {
 		return nil
 	}
-	return o.Schema
+	return t.Schema
 }
 
-func (o *TargetCreate) GetTags() []string {
-	if o == nil {
+func (t *TargetCreate) GetTags() []string {
+	if t == nil {
 		return nil
 	}
-	return o.Tags
+	return t.Tags
 }
 
-func (o *TargetCreate) GetDescription() *string {
-	if o == nil {
+func (t *TargetCreate) GetDescription() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Description
+	return t.Description
 }
 
-func (o *TargetCreate) GetEntityFilters() any {
-	if o == nil {
+func (t *TargetCreate) GetEntityFilters() any {
+	if t == nil {
 		return nil
 	}
-	return o.EntityFilters
+	return t.EntityFilters
 }
 
-func (o *TargetCreate) GetEntitySchema() *string {
-	if o == nil {
+func (t *TargetCreate) GetEntitySchema() *string {
+	if t == nil {
 		return nil
 	}
-	return o.EntitySchema
+	return t.EntitySchema
 }
 
-func (o *TargetCreate) GetName() string {
-	if o == nil {
+func (t *TargetCreate) GetName() string {
+	if t == nil {
 		return ""
 	}
-	return o.Name
+	return t.Name
 }

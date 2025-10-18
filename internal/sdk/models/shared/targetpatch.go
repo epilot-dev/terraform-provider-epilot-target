@@ -49,72 +49,72 @@ type TargetPatch struct {
 	Name *string `json:"name,omitempty"`
 }
 
-func (o *TargetPatch) GetAdditional() map[string]any {
-	if o == nil {
+func (t *TargetPatch) GetAdditional() map[string]any {
+	if t == nil {
 		return nil
 	}
-	return o.Additional
+	return t.Additional
 }
 
-func (o *TargetPatch) GetFiles() *BaseRelation {
-	if o == nil {
+func (t *TargetPatch) GetFiles() *BaseRelation {
+	if t == nil {
 		return nil
 	}
-	return o.Files
+	return t.Files
 }
 
-func (o *TargetPatch) GetManifest() []string {
-	if o == nil {
+func (t *TargetPatch) GetManifest() []string {
+	if t == nil {
 		return nil
 	}
-	return o.Manifest
+	return t.Manifest
 }
 
-func (o *TargetPatch) GetPurpose() []string {
-	if o == nil {
+func (t *TargetPatch) GetPurpose() []string {
+	if t == nil {
 		return nil
 	}
-	return o.Purpose
+	return t.Purpose
 }
 
-func (o *TargetPatch) GetSchema() *TargetPatchSchema {
-	if o == nil {
+func (t *TargetPatch) GetSchema() *TargetPatchSchema {
+	if t == nil {
 		return nil
 	}
-	return o.Schema
+	return t.Schema
 }
 
-func (o *TargetPatch) GetTags() []string {
-	if o == nil {
+func (t *TargetPatch) GetTags() []string {
+	if t == nil {
 		return nil
 	}
-	return o.Tags
+	return t.Tags
 }
 
-func (o *TargetPatch) GetDescription() *string {
-	if o == nil {
+func (t *TargetPatch) GetDescription() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Description
+	return t.Description
 }
 
-func (o *TargetPatch) GetEntityFilters() any {
-	if o == nil {
+func (t *TargetPatch) GetEntityFilters() any {
+	if t == nil {
 		return nil
 	}
-	return o.EntityFilters
+	return t.EntityFilters
 }
 
-func (o *TargetPatch) GetEntitySchema() *string {
-	if o == nil {
+func (t *TargetPatch) GetEntitySchema() *string {
+	if t == nil {
 		return nil
 	}
-	return o.EntitySchema
+	return t.EntitySchema
 }
 
-func (o *TargetPatch) GetName() *string {
-	if o == nil {
+func (t *TargetPatch) GetName() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Name
+	return t.Name
 }

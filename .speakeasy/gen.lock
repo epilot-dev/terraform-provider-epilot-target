@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 5a857039-7f4b-42d5-86fd-449767242ed2
 management:
-  docChecksum: 5bedd5bb332f658926175470b92c7682
+  docChecksum: 8867491bac5d5943e033b79981829d05
   docVersion: 1.0.0
-  speakeasyVersion: 1.611.0
-  generationVersion: 2.694.1
-  releaseVersion: 0.17.10
-  configChecksum: 32f5a7cab9f18e3672495475c001b046
+  speakeasyVersion: 1.637.0
+  generationVersion: 2.727.4
+  releaseVersion: 0.18.0
+  configChecksum: f0e70305d1ca902850e4022e22ec9176
   repoURL: https://github.com/epilot-dev/terraform-provider-epilot-target.git
   repoSubDirectory: .
   published: true
@@ -21,9 +21,9 @@ features:
     unions: 2.85.0
   terraform:
     additionalDependencies: 0.1.0
-    constsAndDefaults: 0.2.1
-    core: 3.44.1
-    globalSecurity: 2.82.0
+    constsAndDefaults: 0.3.0
+    core: 3.46.1
+    globalSecurity: 2.82.1
     globalServerURLs: 2.83.0
     nullables: 0.0.0
     retries: 2.81.4
@@ -31,7 +31,6 @@ features:
 generatedFiles:
   - .gitattributes
   - USAGE.md
-  - examples/README.md
   - examples/data-sources/epilot-target_target/data-source.tf
   - examples/provider/provider.tf
   - examples/resources/epilot-target_target/import-by-string-id.tf
@@ -106,13 +105,14 @@ generatedFiles:
   - internal/sdk/models/shared/target.go
   - internal/sdk/models/shared/targetcreate.go
   - internal/sdk/models/shared/targetpatch.go
+  - internal/sdk/optionalnullable/optionalnullable.go
+  - internal/sdk/optionalnullable/optionalnullable_test.go
   - internal/sdk/retry/config.go
   - internal/sdk/sdk.go
   - internal/sdk/target.go
   - internal/sdk/types/bigint.go
   - internal/sdk/types/date.go
   - internal/sdk/types/datetime.go
-  - internal/sdk/types/decimal.go
   - internal/sdk/types/pointers.go
   - internal/validators/DateValidator.go
   - internal/validators/ExactlyOneChild.go
@@ -1797,3 +1797,30 @@ examples:
           application/json: {"message": "Entity not found", "status": 404}
 examplesVersion: 1.0.2
 generatedTests: {}
+releaseNotes: |
+  ## Terraform SDK Changes Detected:
+  * `SDK.Target.createTarget()`: **Added**
+  * `SDK.Target.deleteTarget()`: **Added**
+  * `SDK.Target.getTarget()`: **Added**
+  * `SDK.Target.patchTarget()`: **Added**
+  * `SDK.Target.updateTarget()`: **Added**
+  * `SDK.Coupon.createCoupon()`: **Deleted** **Breaking** :warning:
+  * `SDK.Coupon.deleteCoupon()`: **Deleted** **Breaking** :warning:
+  * `SDK.Coupon.getCoupon()`: **Deleted** **Breaking** :warning:
+  * `SDK.Coupon.patchCoupon()`: **Deleted** **Breaking** :warning:
+  * `SDK.Coupon.updateCoupon()`: **Deleted** **Breaking** :warning:
+  * `SDK.Price.createPrice()`: **Deleted** **Breaking** :warning:
+  * `SDK.Price.deletePrice()`: **Deleted** **Breaking** :warning:
+  * `SDK.Price.getPrice()`: **Deleted** **Breaking** :warning:
+  * `SDK.Price.patchPrice()`: **Deleted** **Breaking** :warning:
+  * `SDK.Price.updatePrice()`: **Deleted** **Breaking** :warning:
+  * `SDK.Product.createProduct()`: **Deleted** **Breaking** :warning:
+  * `SDK.Product.deleteProduct()`: **Deleted** **Breaking** :warning:
+  * `SDK.Product.getProduct()`: **Deleted** **Breaking** :warning:
+  * `SDK.Product.patchProduct()`: **Deleted** **Breaking** :warning:
+  * `SDK.Product.updateProduct()`: **Deleted** **Breaking** :warning:
+  * `SDK.Tax.createTax()`: **Deleted** **Breaking** :warning:
+  * `SDK.Tax.deleteTax()`: **Deleted** **Breaking** :warning:
+  * `SDK.Tax.getTax()`: **Deleted** **Breaking** :warning:
+  * `SDK.Tax.patchTax()`: **Deleted** **Breaking** :warning:
+  * `SDK.Tax.updateTax()`: **Deleted** **Breaking** :warning:
