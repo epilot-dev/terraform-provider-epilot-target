@@ -28,25 +28,25 @@ func (g *GetTargetRequest) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *GetTargetRequest) GetHydrate() *bool {
-	if o == nil {
+func (g *GetTargetRequest) GetHydrate() *bool {
+	if g == nil {
 		return nil
 	}
-	return o.Hydrate
+	return g.Hydrate
 }
 
-func (o *GetTargetRequest) GetStrict() *bool {
-	if o == nil {
+func (g *GetTargetRequest) GetStrict() *bool {
+	if g == nil {
 		return nil
 	}
-	return o.Strict
+	return g.Strict
 }
 
-func (o *GetTargetRequest) GetTargetID() string {
-	if o == nil {
+func (g *GetTargetRequest) GetTargetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.TargetID
+	return g.TargetID
 }
 
 type GetTargetResponse struct {
@@ -62,37 +62,37 @@ type GetTargetResponse struct {
 	Target *shared.Target
 }
 
-func (o *GetTargetResponse) GetClientError() *shared.ClientError {
-	if o == nil {
+func (g *GetTargetResponse) GetClientError() *shared.ClientError {
+	if g == nil {
 		return nil
 	}
-	return o.ClientError
+	return g.ClientError
 }
 
-func (o *GetTargetResponse) GetContentType() string {
-	if o == nil {
+func (g *GetTargetResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetTargetResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetTargetResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetTargetResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetTargetResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }
 
-func (o *GetTargetResponse) GetTarget() *shared.Target {
-	if o == nil {
+func (g *GetTargetResponse) GetTarget() *shared.Target {
+	if g == nil {
 		return nil
 	}
-	return o.Target
+	return g.Target
 }

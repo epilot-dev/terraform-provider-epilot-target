@@ -70,114 +70,114 @@ func (t *Target) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *Target) GetAdditional() map[string]any {
-	if o == nil {
+func (t *Target) GetAdditional() map[string]any {
+	if t == nil {
 		return nil
 	}
-	return o.Additional
+	return t.Additional
 }
 
-func (o *Target) GetACL() *BaseEntityACL {
-	if o == nil {
+func (t *Target) GetACL() *BaseEntityACL {
+	if t == nil {
 		return nil
 	}
-	return o.ACL
+	return t.ACL
 }
 
-func (o *Target) GetCreatedAt() *time.Time {
-	if o == nil {
+func (t *Target) GetCreatedAt() *time.Time {
+	if t == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return t.CreatedAt
 }
 
-func (o *Target) GetFiles() *BaseRelation {
-	if o == nil {
+func (t *Target) GetFiles() *BaseRelation {
+	if t == nil {
 		return nil
 	}
-	return o.Files
+	return t.Files
 }
 
-func (o *Target) GetID() *string {
-	if o == nil {
+func (t *Target) GetID() *string {
+	if t == nil {
 		return nil
 	}
-	return o.ID
+	return t.ID
 }
 
-func (o *Target) GetManifest() []string {
-	if o == nil {
+func (t *Target) GetManifest() []string {
+	if t == nil {
 		return nil
 	}
-	return o.Manifest
+	return t.Manifest
 }
 
-func (o *Target) GetOrg() string {
-	if o == nil {
+func (t *Target) GetOrg() string {
+	if t == nil {
 		return ""
 	}
-	return o.Org
+	return t.Org
 }
 
-func (o *Target) GetPurpose() []string {
-	if o == nil {
+func (t *Target) GetPurpose() []string {
+	if t == nil {
 		return nil
 	}
-	return o.Purpose
+	return t.Purpose
 }
 
-func (o *Target) GetSchema() Schema {
-	if o == nil {
+func (t *Target) GetSchema() Schema {
+	if t == nil {
 		return Schema("")
 	}
-	return o.Schema
+	return t.Schema
 }
 
-func (o *Target) GetTags() []string {
-	if o == nil {
+func (t *Target) GetTags() []string {
+	if t == nil {
 		return nil
 	}
-	return o.Tags
+	return t.Tags
 }
 
-func (o *Target) GetTitle() *string {
-	if o == nil {
+func (t *Target) GetTitle() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Title
+	return t.Title
 }
 
-func (o *Target) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (t *Target) GetUpdatedAt() *time.Time {
+	if t == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return t.UpdatedAt
 }
 
-func (o *Target) GetDescription() *string {
-	if o == nil {
+func (t *Target) GetDescription() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Description
+	return t.Description
 }
 
-func (o *Target) GetEntityFilters() any {
-	if o == nil {
+func (t *Target) GetEntityFilters() any {
+	if t == nil {
 		return nil
 	}
-	return o.EntityFilters
+	return t.EntityFilters
 }
 
-func (o *Target) GetEntitySchema() *string {
-	if o == nil {
+func (t *Target) GetEntitySchema() *string {
+	if t == nil {
 		return nil
 	}
-	return o.EntitySchema
+	return t.EntitySchema
 }
 
-func (o *Target) GetName() string {
-	if o == nil {
+func (t *Target) GetName() string {
+	if t == nil {
 		return ""
 	}
-	return o.Name
+	return t.Name
 }

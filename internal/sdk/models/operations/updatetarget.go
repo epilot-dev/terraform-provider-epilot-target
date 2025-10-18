@@ -14,18 +14,18 @@ type UpdateTargetRequest struct {
 	TargetID string `pathParam:"style=simple,explode=false,name=targetId"`
 }
 
-func (o *UpdateTargetRequest) GetTargetCreate() shared.TargetCreate {
-	if o == nil {
+func (u *UpdateTargetRequest) GetTargetCreate() shared.TargetCreate {
+	if u == nil {
 		return shared.TargetCreate{}
 	}
-	return o.TargetCreate
+	return u.TargetCreate
 }
 
-func (o *UpdateTargetRequest) GetTargetID() string {
-	if o == nil {
+func (u *UpdateTargetRequest) GetTargetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.TargetID
+	return u.TargetID
 }
 
 type UpdateTargetResponse struct {
@@ -41,37 +41,37 @@ type UpdateTargetResponse struct {
 	Target *shared.Target
 }
 
-func (o *UpdateTargetResponse) GetClientError() *shared.ClientError {
-	if o == nil {
+func (u *UpdateTargetResponse) GetClientError() *shared.ClientError {
+	if u == nil {
 		return nil
 	}
-	return o.ClientError
+	return u.ClientError
 }
 
-func (o *UpdateTargetResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateTargetResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateTargetResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateTargetResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateTargetResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateTargetResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }
 
-func (o *UpdateTargetResponse) GetTarget() *shared.Target {
-	if o == nil {
+func (u *UpdateTargetResponse) GetTarget() *shared.Target {
+	if u == nil {
 		return nil
 	}
-	return o.Target
+	return u.Target
 }

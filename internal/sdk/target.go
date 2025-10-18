@@ -64,7 +64,7 @@ func (s *Target) CreateTarget(ctx context.Context, request shared.TargetCreate, 
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "createTarget",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -312,7 +312,7 @@ func (s *Target) DeleteTarget(ctx context.Context, request operations.DeleteTarg
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "deleteTarget",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -553,7 +553,7 @@ func (s *Target) GetTarget(ctx context.Context, request operations.GetTargetRequ
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "getTarget",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -798,7 +798,7 @@ func (s *Target) PatchTarget(ctx context.Context, request operations.PatchTarget
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "patchTarget",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TargetPatch", "json", `request:"mediaType=application/json"`)
@@ -1046,7 +1046,7 @@ func (s *Target) UpdateTarget(ctx context.Context, request operations.UpdateTarg
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "updateTarget",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TargetCreate", "json", `request:"mediaType=application/json"`)
