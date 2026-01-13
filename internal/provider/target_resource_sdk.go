@@ -148,26 +148,29 @@ func (r *TargetResourceModel) ToOperationsPatchTargetRequest(ctx context.Context
 func (r *TargetResourceModel) ToSharedTargetCreate(ctx context.Context) (*shared.TargetCreate, diag.Diagnostics) {
 	var diags diag.Diagnostics
 
-	additional := make(map[string]interface{})
-	for additionalKey, additionalValue := range r.Additional {
-		var additionalInst interface{}
-		_ = json.Unmarshal([]byte(additionalValue.ValueString()), &additionalInst)
-		additional[additionalKey] = additionalInst
+	var additional map[string]interface{}
+	if r.Additional != nil {
+		additional = make(map[string]interface{})
+		for additionalKey := range r.Additional {
+			var additionalInst interface{}
+			_ = json.Unmarshal([]byte(r.Additional[additionalKey].ValueString()), &additionalInst)
+			additional[additionalKey] = additionalInst
+		}
 	}
 	var files *shared.BaseRelation
 	if r.Files != nil {
 		dollarRelation := make([]shared.DollarRelation, 0, len(r.Files.DollarRelation))
-		for _, dollarRelationItem := range r.Files.DollarRelation {
+		for dollarRelationIndex := range r.Files.DollarRelation {
 			var tags []string
-			if dollarRelationItem.Tags != nil {
-				tags = make([]string, 0, len(dollarRelationItem.Tags))
-				for _, tagsItem := range dollarRelationItem.Tags {
-					tags = append(tags, tagsItem.ValueString())
+			if r.Files.DollarRelation[dollarRelationIndex].Tags != nil {
+				tags = make([]string, 0, len(r.Files.DollarRelation[dollarRelationIndex].Tags))
+				for tagsIndex := range r.Files.DollarRelation[dollarRelationIndex].Tags {
+					tags = append(tags, r.Files.DollarRelation[dollarRelationIndex].Tags[tagsIndex].ValueString())
 				}
 			}
 			entityID := new(string)
-			if !dollarRelationItem.EntityID.IsUnknown() && !dollarRelationItem.EntityID.IsNull() {
-				*entityID = dollarRelationItem.EntityID.ValueString()
+			if !r.Files.DollarRelation[dollarRelationIndex].EntityID.IsUnknown() && !r.Files.DollarRelation[dollarRelationIndex].EntityID.IsNull() {
+				*entityID = r.Files.DollarRelation[dollarRelationIndex].EntityID.ValueString()
 			} else {
 				entityID = nil
 			}
@@ -181,14 +184,14 @@ func (r *TargetResourceModel) ToSharedTargetCreate(ctx context.Context) (*shared
 		}
 	}
 	manifest := make([]string, 0, len(r.Manifest))
-	for _, manifestItem := range r.Manifest {
-		manifest = append(manifest, manifestItem.ValueString())
+	for manifestIndex := range r.Manifest {
+		manifest = append(manifest, r.Manifest[manifestIndex].ValueString())
 	}
 	var purpose []string
 	if r.Purpose != nil {
 		purpose = make([]string, 0, len(r.Purpose))
-		for _, purposeItem := range r.Purpose {
-			purpose = append(purpose, purposeItem.ValueString())
+		for purposeIndex := range r.Purpose {
+			purpose = append(purpose, r.Purpose[purposeIndex].ValueString())
 		}
 	}
 	schema := new(shared.TargetCreateSchema)
@@ -200,8 +203,8 @@ func (r *TargetResourceModel) ToSharedTargetCreate(ctx context.Context) (*shared
 	var tags1 []string
 	if r.Tags != nil {
 		tags1 = make([]string, 0, len(r.Tags))
-		for _, tagsItem1 := range r.Tags {
-			tags1 = append(tags1, tagsItem1.ValueString())
+		for tagsIndex1 := range r.Tags {
+			tags1 = append(tags1, r.Tags[tagsIndex1].ValueString())
 		}
 	}
 	description := new(string)
@@ -242,26 +245,29 @@ func (r *TargetResourceModel) ToSharedTargetCreate(ctx context.Context) (*shared
 func (r *TargetResourceModel) ToSharedTargetPatch(ctx context.Context) (*shared.TargetPatch, diag.Diagnostics) {
 	var diags diag.Diagnostics
 
-	additional := make(map[string]interface{})
-	for additionalKey, additionalValue := range r.Additional {
-		var additionalInst interface{}
-		_ = json.Unmarshal([]byte(additionalValue.ValueString()), &additionalInst)
-		additional[additionalKey] = additionalInst
+	var additional map[string]interface{}
+	if r.Additional != nil {
+		additional = make(map[string]interface{})
+		for additionalKey := range r.Additional {
+			var additionalInst interface{}
+			_ = json.Unmarshal([]byte(r.Additional[additionalKey].ValueString()), &additionalInst)
+			additional[additionalKey] = additionalInst
+		}
 	}
 	var files *shared.BaseRelation
 	if r.Files != nil {
 		dollarRelation := make([]shared.DollarRelation, 0, len(r.Files.DollarRelation))
-		for _, dollarRelationItem := range r.Files.DollarRelation {
+		for dollarRelationIndex := range r.Files.DollarRelation {
 			var tags []string
-			if dollarRelationItem.Tags != nil {
-				tags = make([]string, 0, len(dollarRelationItem.Tags))
-				for _, tagsItem := range dollarRelationItem.Tags {
-					tags = append(tags, tagsItem.ValueString())
+			if r.Files.DollarRelation[dollarRelationIndex].Tags != nil {
+				tags = make([]string, 0, len(r.Files.DollarRelation[dollarRelationIndex].Tags))
+				for tagsIndex := range r.Files.DollarRelation[dollarRelationIndex].Tags {
+					tags = append(tags, r.Files.DollarRelation[dollarRelationIndex].Tags[tagsIndex].ValueString())
 				}
 			}
 			entityID := new(string)
-			if !dollarRelationItem.EntityID.IsUnknown() && !dollarRelationItem.EntityID.IsNull() {
-				*entityID = dollarRelationItem.EntityID.ValueString()
+			if !r.Files.DollarRelation[dollarRelationIndex].EntityID.IsUnknown() && !r.Files.DollarRelation[dollarRelationIndex].EntityID.IsNull() {
+				*entityID = r.Files.DollarRelation[dollarRelationIndex].EntityID.ValueString()
 			} else {
 				entityID = nil
 			}
@@ -275,14 +281,14 @@ func (r *TargetResourceModel) ToSharedTargetPatch(ctx context.Context) (*shared.
 		}
 	}
 	manifest := make([]string, 0, len(r.Manifest))
-	for _, manifestItem := range r.Manifest {
-		manifest = append(manifest, manifestItem.ValueString())
+	for manifestIndex := range r.Manifest {
+		manifest = append(manifest, r.Manifest[manifestIndex].ValueString())
 	}
 	var purpose []string
 	if r.Purpose != nil {
 		purpose = make([]string, 0, len(r.Purpose))
-		for _, purposeItem := range r.Purpose {
-			purpose = append(purpose, purposeItem.ValueString())
+		for purposeIndex := range r.Purpose {
+			purpose = append(purpose, r.Purpose[purposeIndex].ValueString())
 		}
 	}
 	schema := new(shared.TargetPatchSchema)
@@ -294,8 +300,8 @@ func (r *TargetResourceModel) ToSharedTargetPatch(ctx context.Context) (*shared.
 	var tags1 []string
 	if r.Tags != nil {
 		tags1 = make([]string, 0, len(r.Tags))
-		for _, tagsItem1 := range r.Tags {
-			tags1 = append(tags1, tagsItem1.ValueString())
+		for tagsIndex1 := range r.Tags {
+			tags1 = append(tags1, r.Tags[tagsIndex1].ValueString())
 		}
 	}
 	description := new(string)
