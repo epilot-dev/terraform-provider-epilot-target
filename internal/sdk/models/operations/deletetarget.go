@@ -12,11 +12,11 @@ type DeleteTargetRequest struct {
 	TargetID string `pathParam:"style=simple,explode=false,name=targetId"`
 }
 
-func (o *DeleteTargetRequest) GetTargetID() string {
-	if o == nil {
+func (d *DeleteTargetRequest) GetTargetID() string {
+	if d == nil {
 		return ""
 	}
-	return o.TargetID
+	return d.TargetID
 }
 
 type DeleteTargetResponse struct {
@@ -32,37 +32,37 @@ type DeleteTargetResponse struct {
 	Target *shared.Target
 }
 
-func (o *DeleteTargetResponse) GetClientError() *shared.ClientError {
-	if o == nil {
+func (d *DeleteTargetResponse) GetClientError() *shared.ClientError {
+	if d == nil {
 		return nil
 	}
-	return o.ClientError
+	return d.ClientError
 }
 
-func (o *DeleteTargetResponse) GetContentType() string {
-	if o == nil {
+func (d *DeleteTargetResponse) GetContentType() string {
+	if d == nil {
 		return ""
 	}
-	return o.ContentType
+	return d.ContentType
 }
 
-func (o *DeleteTargetResponse) GetStatusCode() int {
-	if o == nil {
+func (d *DeleteTargetResponse) GetStatusCode() int {
+	if d == nil {
 		return 0
 	}
-	return o.StatusCode
+	return d.StatusCode
 }
 
-func (o *DeleteTargetResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (d *DeleteTargetResponse) GetRawResponse() *http.Response {
+	if d == nil {
 		return nil
 	}
-	return o.RawResponse
+	return d.RawResponse
 }
 
-func (o *DeleteTargetResponse) GetTarget() *shared.Target {
-	if o == nil {
+func (d *DeleteTargetResponse) GetTarget() *shared.Target {
+	if d == nil {
 		return nil
 	}
-	return o.Target
+	return d.Target
 }
