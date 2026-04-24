@@ -125,6 +125,7 @@ func (r *TargetDataSource) Schema(ctx context.Context, req datasource.SchemaRequ
 			},
 			"id": schema.StringAttribute{
 				Computed: true,
+				Optional: true,
 			},
 			"manifest": schema.ListAttribute{
 				Computed:    true,

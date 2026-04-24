@@ -75,9 +75,10 @@ Available configuration:
 <!-- Start Available Resources and Data Sources [operations] -->
 ## Available Resources and Data Sources
 
-### Resources
+### Managed Resources
 
 * [epilot-target_target](docs/resources/target.md)
+
 ### Data Sources
 
 * [epilot-target_target](docs/data-sources/target.md)

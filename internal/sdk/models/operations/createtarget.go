@@ -20,37 +20,37 @@ type CreateTargetResponse struct {
 	Target *shared.Target
 }
 
-func (o *CreateTargetResponse) GetClientError() *shared.ClientError {
-	if o == nil {
+func (c *CreateTargetResponse) GetClientError() *shared.ClientError {
+	if c == nil {
 		return nil
 	}
-	return o.ClientError
+	return c.ClientError
 }
 
-func (o *CreateTargetResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateTargetResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateTargetResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateTargetResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateTargetResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateTargetResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }
 
-func (o *CreateTargetResponse) GetTarget() *shared.Target {
-	if o == nil {
+func (c *CreateTargetResponse) GetTarget() *shared.Target {
+	if c == nil {
 		return nil
 	}
-	return o.Target
+	return c.Target
 }

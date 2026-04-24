@@ -64,7 +64,7 @@ func (s *Target) CreateTarget(ctx context.Context, request shared.TargetCreate, 
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "createTarget",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -312,7 +312,7 @@ func (s *Target) DeleteTarget(ctx context.Context, request operations.DeleteTarg
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "deleteTarget",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -509,6 +509,8 @@ func (s *Target) DeleteTarget(ctx context.Context, request operations.DeleteTarg
 			}
 			return nil, errors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
+	case httpRes.StatusCode == 404:
+		utils.DrainBody(httpRes)
 	default:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -553,7 +555,7 @@ func (s *Target) GetTarget(ctx context.Context, request operations.GetTargetRequ
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "getTarget",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -575,7 +577,7 @@ func (s *Target) GetTarget(ctx context.Context, request operations.GetTargetRequ
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -754,6 +756,8 @@ func (s *Target) GetTarget(ctx context.Context, request operations.GetTargetRequ
 			}
 			return nil, errors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
+	case httpRes.StatusCode == 404:
+		utils.DrainBody(httpRes)
 	default:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -798,7 +802,7 @@ func (s *Target) PatchTarget(ctx context.Context, request operations.PatchTarget
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "patchTarget",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TargetPatch", "json", `request:"mediaType=application/json"`)
@@ -1046,7 +1050,7 @@ func (s *Target) UpdateTarget(ctx context.Context, request operations.UpdateTarg
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "updateTarget",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TargetCreate", "json", `request:"mediaType=application/json"`)
