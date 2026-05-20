@@ -1,19 +1,18 @@
-speakeasyVersion: 1.523.0
+speakeasyVersion: 1.763.2
 sources:
     my-source:
         sourceNamespace: my-source
-        sourceRevisionDigest: sha256:ef289a7c77637337b07da6402aded23c09840a838deb6ace7ffcf8c47b97b311
-        sourceBlobDigest: sha256:0734b26610de4c72bceb115a185fd752842e6983c63985437cb1f43d5c320b53
+        sourceRevisionDigest: sha256:a27d4dae999644d4c7d49cb6c325f88e296166e75625bce497d25018c5ecd75b
+        sourceBlobDigest: sha256:8437830da59ec34ac3e838da9642c82e0a47a768ed7fa37ab891adbe3dc9a892
         tags:
             - latest
-            - speakeasy-sdk-regen-1742793032
             - 1.0.0
 targets:
     terraform:
         source: my-source
         sourceNamespace: my-source
-        sourceRevisionDigest: sha256:ef289a7c77637337b07da6402aded23c09840a838deb6ace7ffcf8c47b97b311
-        sourceBlobDigest: sha256:0734b26610de4c72bceb115a185fd752842e6983c63985437cb1f43d5c320b53
+        sourceRevisionDigest: sha256:a27d4dae999644d4c7d49cb6c325f88e296166e75625bce497d25018c5ecd75b
+        sourceBlobDigest: sha256:8437830da59ec34ac3e838da9642c82e0a47a768ed7fa37ab891adbe3dc9a892
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
