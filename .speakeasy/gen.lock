@@ -1,15 +1,20 @@
 lockVersion: 2.0.0
 id: 5a857039-7f4b-42d5-86fd-449767242ed2
 management:
-  docChecksum: 5bedd5bb332f658926175470b92c7682
+  docChecksum: 8867491bac5d5943e033b79981829d05
   docVersion: 1.0.0
-  speakeasyVersion: 1.611.0
-  generationVersion: 2.694.1
-  releaseVersion: 0.17.10
-  configChecksum: 32f5a7cab9f18e3672495475c001b046
+  speakeasyVersion: 1.791.0
+  generationVersion: 2.924.0
+  releaseVersion: 0.18.0
+  configChecksum: 54db62e31822a8df4010c96fe9ce150b
   repoURL: https://github.com/epilot-dev/terraform-provider-epilot-target.git
   repoSubDirectory: .
+  installationURL: https://github.com/epilot-dev/terraform-provider-epilot-target
   published: true
+persistentEdits:
+  generation_id: 0f5492db-151f-4618-a8ed-cf508a2dfc9f
+  pristine_commit_hash: 91b1202743ca3e23c7f94e8c972800f04609d3eb
+  pristine_tree_hash: 96a1002e952e52e2738f3e1988afb23ffda5d157
 features:
   go:
     additionalProperties: 0.1.1
@@ -21,117 +26,522 @@ features:
     unions: 2.85.0
   terraform:
     additionalDependencies: 0.1.0
-    constsAndDefaults: 0.2.1
-    core: 3.44.1
-    globalSecurity: 2.82.0
-    globalServerURLs: 2.83.0
+    constsAndDefaults: 0.3.2
+    core: 3.47.10
+    globalSecurity: 2.82.3
+    globalServerURLs: 2.83.2
     nullables: 0.0.0
-    retries: 2.81.4
+    retries: 2.81.5
     typeOverrides: 2.81.1
-generatedFiles:
-  - .gitattributes
-  - USAGE.md
-  - examples/README.md
-  - examples/data-sources/epilot-target_target/data-source.tf
-  - examples/provider/provider.tf
-  - examples/resources/epilot-target_target/import-by-string-id.tf
-  - examples/resources/epilot-target_target/import.sh
-  - examples/resources/epilot-target_target/resource.tf
-  - go.mod
-  - go.sum
-  - internal/planmodifiers/boolplanmodifier/suppress_diff.go
-  - internal/planmodifiers/float32planmodifier/suppress_diff.go
-  - internal/planmodifiers/float64planmodifier/suppress_diff.go
-  - internal/planmodifiers/int32planmodifier/suppress_diff.go
-  - internal/planmodifiers/int64planmodifier/suppress_diff.go
-  - internal/planmodifiers/listplanmodifier/suppress_diff.go
-  - internal/planmodifiers/mapplanmodifier/suppress_diff.go
-  - internal/planmodifiers/numberplanmodifier/suppress_diff.go
-  - internal/planmodifiers/objectplanmodifier/suppress_diff.go
-  - internal/planmodifiers/setplanmodifier/suppress_diff.go
-  - internal/planmodifiers/stringplanmodifier/suppress_diff.go
-  - internal/planmodifiers/utils/state_check.go
-  - internal/provider/provider.go
-  - internal/provider/reflect/diags.go
-  - internal/provider/reflect/doc.go
-  - internal/provider/reflect/generic_attr_value.go
-  - internal/provider/reflect/helpers.go
-  - internal/provider/reflect/interfaces.go
-  - internal/provider/reflect/into.go
-  - internal/provider/reflect/map.go
-  - internal/provider/reflect/number.go
-  - internal/provider/reflect/options.go
-  - internal/provider/reflect/outof.go
-  - internal/provider/reflect/pointer.go
-  - internal/provider/reflect/primitive.go
-  - internal/provider/reflect/slice.go
-  - internal/provider/reflect/struct.go
-  - internal/provider/target_data_source.go
-  - internal/provider/target_data_source_sdk.go
-  - internal/provider/target_resource.go
-  - internal/provider/target_resource_sdk.go
-  - internal/provider/typeconvert/date.go
-  - internal/provider/typeconvert/datetime.go
-  - internal/provider/typeconvert/int.go
-  - internal/provider/types/base_entity_acl.go
-  - internal/provider/types/base_relation.go
-  - internal/provider/types/dollar_relation.go
-  - internal/provider/utils.go
-  - internal/sdk/.gitattributes
-  - internal/sdk/docs/models/operations/option.md
-  - internal/sdk/internal/config/sdkconfiguration.go
-  - internal/sdk/internal/hooks/hooks.go
-  - internal/sdk/internal/utils/contenttype.go
-  - internal/sdk/internal/utils/env.go
-  - internal/sdk/internal/utils/form.go
-  - internal/sdk/internal/utils/headers.go
-  - internal/sdk/internal/utils/json.go
-  - internal/sdk/internal/utils/pathparams.go
-  - internal/sdk/internal/utils/queryparams.go
-  - internal/sdk/internal/utils/requestbody.go
-  - internal/sdk/internal/utils/retries.go
-  - internal/sdk/internal/utils/security.go
-  - internal/sdk/internal/utils/utils.go
-  - internal/sdk/models/errors/sdkerror.go
-  - internal/sdk/models/operations/createtarget.go
-  - internal/sdk/models/operations/deletetarget.go
-  - internal/sdk/models/operations/gettarget.go
-  - internal/sdk/models/operations/options.go
-  - internal/sdk/models/operations/patchtarget.go
-  - internal/sdk/models/operations/updatetarget.go
-  - internal/sdk/models/shared/baseentityacl.go
-  - internal/sdk/models/shared/baserelation.go
-  - internal/sdk/models/shared/clienterror.go
-  - internal/sdk/models/shared/security.go
-  - internal/sdk/models/shared/target.go
-  - internal/sdk/models/shared/targetcreate.go
-  - internal/sdk/models/shared/targetpatch.go
-  - internal/sdk/retry/config.go
-  - internal/sdk/sdk.go
-  - internal/sdk/target.go
-  - internal/sdk/types/bigint.go
-  - internal/sdk/types/date.go
-  - internal/sdk/types/datetime.go
-  - internal/sdk/types/decimal.go
-  - internal/sdk/types/pointers.go
-  - internal/validators/DateValidator.go
-  - internal/validators/ExactlyOneChild.go
-  - internal/validators/JSONParseValidator.go
-  - internal/validators/RFC3339Validator.go
-  - internal/validators/boolvalidators/not_null.go
-  - internal/validators/float32validators/not_null.go
-  - internal/validators/float64validators/not_null.go
-  - internal/validators/int32validators/not_null.go
-  - internal/validators/int64validators/not_null.go
-  - internal/validators/listvalidators/not_null.go
-  - internal/validators/mapvalidators/not_null.go
-  - internal/validators/numbervalidators/not_null.go
-  - internal/validators/objectvalidators/not_null.go
-  - internal/validators/setvalidators/not_null.go
-  - internal/validators/stringvalidators/not_null.go
-  - main.go
-  - terraform-registry-manifest.json
-  - tools/tools.go
+trackedFiles:
+  .gitattributes:
+    id: 24139dae6567
+    last_write_checksum: sha1:84b0115789fc3ea52e31df701d8a27f76077e29f
+    pristine_git_object: e6a994416d0f527912d2d272e2583458f4fc9bcb
+  USAGE.md:
+    id: 3aed33ce6e6f
+    last_write_checksum: sha1:02c32c9430f37507b3eacd41cdc36f080809e92d
+    pristine_git_object: 8e707bb129af1da185ba30b4c289b0160819c437
+  examples/data-sources/epilot-target_target/data-source.tf:
+    id: 1fc58513b3d3
+    last_write_checksum: sha1:d2ad8c6c6a93e5ee291a831aa28069bf094852b1
+    pristine_git_object: aacb62d2edad1a427a79dfa079ab06093e028527
+  examples/provider/provider.tf:
+    id: 954e955c0240
+    last_write_checksum: sha1:724a48113c6e801b200f4a6161b59884a302f296
+    pristine_git_object: 9c29f5af2e207e3d073b8907bb280d1ddb722e9d
+  examples/resources/epilot-target_target/import-by-string-id.tf:
+    id: a6a596190cef
+    last_write_checksum: sha1:592da67bcfaa762137d999ed726f95552ef5cd43
+    pristine_git_object: 700736a55525b2d280c5564dd3d3d93ac7eaf0cb
+  examples/resources/epilot-target_target/import.sh:
+    id: bf813b38fb7a
+    last_write_checksum: sha1:d9979bee18faf402b06fc89734aebcea09f19978
+    pristine_git_object: c4344f8144e28cfe4a3bd87cfefd8b9dcc4c0572
+  examples/resources/epilot-target_target/resource.tf:
+    id: 6d485cbc373c
+    last_write_checksum: sha1:2cc31dcb547094252f7cfeb1ef8aee5508c846c5
+    pristine_git_object: 188f2f1ee1386d065a9ee6582582c1bf28db4094
+  go.mod:
+    id: c47645c391ad
+    last_write_checksum: sha1:b0bed39fac467dfa6e2a4f00e107b10653875000
+    pristine_git_object: 3b9eefec678ad292fdb9643653484cbe4638f69e
+  internal/planmodifiers/boolplanmodifier/suppress_diff.go:
+    id: 3cf85b98963e
+    last_write_checksum: sha1:d53b6b7e69bbb9254c2685b8fd707f426aa39dd5
+    pristine_git_object: 010b9ee50ff148ae2b45c0d0ff6ba2772fc50a30
+  internal/planmodifiers/boolplanmodifier/use_config_value.go:
+    id: c0a10558e419
+    last_write_checksum: sha1:506e2cac3ec4075a8837403860ef0b07e19bc337
+    pristine_git_object: 210846ca24831a6bda811d3e8a42326716d7bf97
+  internal/planmodifiers/boolplanmodifier/use_hoisted_value.go:
+    id: e44067341c99
+    last_write_checksum: sha1:724c50f070c7303ae2b5c8f355b044c3e436630b
+    pristine_git_object: 7b0067d74b1ad2326962776552f536174de8d972
+  internal/planmodifiers/float32planmodifier/suppress_diff.go:
+    id: b7f3f671e479
+    last_write_checksum: sha1:d67d83a8eb0d2d68495d0157e9bfb2e60fac8e62
+    pristine_git_object: d6e2d7309dedba988c4e376dbceca3c721425448
+  internal/planmodifiers/float32planmodifier/use_config_value.go:
+    id: e75edfe23c08
+    last_write_checksum: sha1:2683d9de3605886cb01438a9015c8e8b02b4e069
+    pristine_git_object: 0aafffa779b10b01d1e9c831c3a4bda3e6d97789
+  internal/planmodifiers/float32planmodifier/use_hoisted_value.go:
+    id: 4a18d1d4a105
+    last_write_checksum: sha1:8b6dda7f21f88457b12616c88d9fc030ab2bd19b
+    pristine_git_object: 4a3e6231a9fe18b28ff880e5f3126d73a78d207c
+  internal/planmodifiers/float64planmodifier/suppress_diff.go:
+    id: 7ae872c2243d
+    last_write_checksum: sha1:acac41f53cb81b05639d9bdf231dfef034fe73fb
+    pristine_git_object: c16ae1a37dce664771475c5c3b00b7894148ddd6
+  internal/planmodifiers/float64planmodifier/use_config_value.go:
+    id: 8fd8670f7434
+    last_write_checksum: sha1:cc1f1cadfd17a0b9b1e729029dccc03f17d734a5
+    pristine_git_object: ecd655b8d658d84aa5cbcc3e1808b69674071325
+  internal/planmodifiers/float64planmodifier/use_hoisted_value.go:
+    id: 5762e9e310fc
+    last_write_checksum: sha1:8f6075dca480aaaabb118d2db45e67bcc8ebb152
+    pristine_git_object: 29c83f22b50f6c5d770055e683af5e40f0f6c566
+  internal/planmodifiers/int32planmodifier/suppress_diff.go:
+    id: 3ee3ede7dc9d
+    last_write_checksum: sha1:c8226a626a6da0c3008538826410e9fe7b62a90f
+    pristine_git_object: f274c2121f7241432d8a98a490e54e0b98476ee3
+  internal/planmodifiers/int32planmodifier/use_config_value.go:
+    id: 40be4e07e289
+    last_write_checksum: sha1:019ba1949b00493bf1a866821f9331d50c8a1f09
+    pristine_git_object: ebc98aae308008b2cda39d5f4cfa781982afa44f
+  internal/planmodifiers/int32planmodifier/use_hoisted_value.go:
+    id: 887f32d55316
+    last_write_checksum: sha1:2f892a5b6ea81a488b05fb55e8ed669560a16bdb
+    pristine_git_object: 4d842b19ab156a033baa3c21077a0649754bbb60
+  internal/planmodifiers/int64planmodifier/suppress_diff.go:
+    id: fade0cc85582
+    last_write_checksum: sha1:c6b1889d87aaf4683725036b80296e4fd50149a0
+    pristine_git_object: 3fceec1cc0d1a8e6dbcc157012e1c460f63d5d4a
+  internal/planmodifiers/int64planmodifier/use_config_value.go:
+    id: e38d6f43d093
+    last_write_checksum: sha1:b5a63f0c356cd72698e25e1b4f4fc3e29b35d482
+    pristine_git_object: 2ec2d53d3ac13f58f64feb32b7fb07ca37b8fe99
+  internal/planmodifiers/int64planmodifier/use_hoisted_value.go:
+    id: ae01f54b02fa
+    last_write_checksum: sha1:f022396ecbfef46cb2c3f1df6b82f74ed8fc8d39
+    pristine_git_object: fa50012d13bfc3261bd624a0ce38494a3b0db14f
+  internal/planmodifiers/listplanmodifier/suppress_diff.go:
+    id: 7b93ed9460b9
+    last_write_checksum: sha1:fb0eb783ea17615c88a7a38a79f2c0c96fec227d
+    pristine_git_object: 7ed69c677f0d58e3bc58b8ef0f8081031ef828ba
+  internal/planmodifiers/listplanmodifier/use_config_value.go:
+    id: c9b31b246860
+    last_write_checksum: sha1:c56e2d23520ac7023f800328bb7599e7eba2f202
+    pristine_git_object: 7e851c7613c71921fd4ccf7ca1f95b8b22ce9745
+  internal/planmodifiers/listplanmodifier/use_hoisted_value.go:
+    id: 6232d2937a04
+    last_write_checksum: sha1:4b0976f51a1bc493aad8217f793a004612befb8e
+    pristine_git_object: d31df0b23068d12e2c424b4dad467414c934cea7
+  internal/planmodifiers/mapplanmodifier/suppress_diff.go:
+    id: 37bee37da583
+    last_write_checksum: sha1:94712ef275fd212eeba49a58c3fb52100b48dd1a
+    pristine_git_object: 25e94cf3e3975138652126c26f8510e8fb525277
+  internal/planmodifiers/mapplanmodifier/use_config_value.go:
+    id: 8fef370eccaa
+    last_write_checksum: sha1:7c2163c8fa4be8e8f7e7499cdb08cc5ed1924b39
+    pristine_git_object: 0f2a717f45ca60218f4b8d9e81a6a5cd01494905
+  internal/planmodifiers/mapplanmodifier/use_hoisted_value.go:
+    id: b22b13c6b864
+    last_write_checksum: sha1:be4226fe077e728b0d801f9064fd35c126bc1c80
+    pristine_git_object: e05de8acd4006ba54a34e055b154fd5355595146
+  internal/planmodifiers/numberplanmodifier/suppress_diff.go:
+    id: 0debe6a63221
+    last_write_checksum: sha1:630fe7a65e9d03f95b1c0c5f4f2c3ef546049434
+    pristine_git_object: 2e861432fa704cce9e1da51dd77d9ac319668160
+  internal/planmodifiers/numberplanmodifier/use_config_value.go:
+    id: e6b779d30d26
+    last_write_checksum: sha1:9b92d53a4a5f57e211e6f41ebb6c36cb12357ae6
+    pristine_git_object: e93c117a0665121b4c43c4a0fd5faec999ad016e
+  internal/planmodifiers/numberplanmodifier/use_hoisted_value.go:
+    id: b52fbd8c6aed
+    last_write_checksum: sha1:cc842ea03ac698457122bea71edf007dfbfebdcc
+    pristine_git_object: 38bb2a9b1b25a03abe15794a74eadec8a7b881a5
+  internal/planmodifiers/objectplanmodifier/suppress_diff.go:
+    id: c5bc1c3980dd
+    last_write_checksum: sha1:da6bfeb107e66a6581ce0a1ea681695cd448e95d
+    pristine_git_object: c3d694ca50cc757d5c3a524c543427393d34122c
+  internal/planmodifiers/objectplanmodifier/use_config_value.go:
+    id: 7f103d324869
+    last_write_checksum: sha1:1f2b6727605c0b56ff2212ab2e2528046f05b157
+    pristine_git_object: eaf24076aeaf233c342886079be38561b94d3856
+  internal/planmodifiers/objectplanmodifier/use_hoisted_value.go:
+    id: 9d64f475cc1d
+    last_write_checksum: sha1:e87b7fea2116918614fb096592a81275d2ed8f1c
+    pristine_git_object: 7e292aff08dc952e034f554993c7887ed21eebad
+  internal/planmodifiers/setplanmodifier/suppress_diff.go:
+    id: 2db9381ea39f
+    last_write_checksum: sha1:2526eb059ee06965f7a32f568dae494ef4828af7
+    pristine_git_object: a2747531b3ae101c042bebe8ae5f2b1b35bc7a89
+  internal/planmodifiers/setplanmodifier/use_config_value.go:
+    id: 62a591230001
+    last_write_checksum: sha1:fe02165f8fd260bbce09f34adfa378376363422f
+    pristine_git_object: a95de11e54a028586b41352c084de59fdc7af66c
+  internal/planmodifiers/setplanmodifier/use_hoisted_value.go:
+    id: f0486343f81b
+    last_write_checksum: sha1:1662f8ef593746bf5073cd69f372efb982d9d9f7
+    pristine_git_object: 495c0d7464df678a87fd8657b5d1862ca23a48a8
+  internal/planmodifiers/stringplanmodifier/suppress_diff.go:
+    id: 05379039a176
+    last_write_checksum: sha1:65f022412e291665a6b636cfeeebd2e974485f19
+    pristine_git_object: f72ccea323cd75c619f0e0eedbdaf53399c244ed
+  internal/planmodifiers/stringplanmodifier/use_config_value.go:
+    id: a783ed056524
+    last_write_checksum: sha1:250673402508661f9d12cfa026dc029d5e7855d9
+    pristine_git_object: 8b4457aeb6b22b7f2b581434762e71f3f782897b
+  internal/planmodifiers/stringplanmodifier/use_hoisted_value.go:
+    id: f9220e0f9187
+    last_write_checksum: sha1:9b4db9de3b51dfc6ce0c06e0a5743c2d5dbc35cf
+    pristine_git_object: a9800f7e17485de39f523405f2b467bcc9653d44
+  internal/planmodifiers/utils/hoisted_value.go:
+    id: 7c3741509670
+    last_write_checksum: sha1:04ccb3d58a019eb0e94efe207280974e85e5fccc
+    pristine_git_object: 628b67bbdb34036dc48d3791628383e6f26dd891
+  internal/planmodifiers/utils/state_check.go:
+    id: ead742412d0f
+    last_write_checksum: sha1:acc38ad698bf4fa8c51aa662076cf57b79024bd5
+    pristine_git_object: 0ea64fbeb1fd7709d7241a8e06d34bfe9d0323d3
+  internal/provider/provider.go:
+    id: 1e7e86841cf3
+    last_write_checksum: sha1:f66999eedf41993d2c6f10d7e2c3c580a171a8fd
+    pristine_git_object: 88af9f5b06e4570d9bcd28882d9e48e7575378a5
+  internal/provider/reflect/diags.go:
+    id: 35b6b44972e2
+    last_write_checksum: sha1:ace8bc53054bb1d8ee8689acf3e4323de75a6297
+    pristine_git_object: 50c50c8c2ee48a2e0bd9f7e01e9de02489c887d8
+  internal/provider/reflect/doc.go:
+    id: cbfb54ee320b
+    last_write_checksum: sha1:67814656717ff0d0ff38fd9db09872e28666642b
+    pristine_git_object: e384126d4201af70574ce3a9fb8102edaa3b932e
+  internal/provider/reflect/generic_attr_value.go:
+    id: e422f9e35e9e
+    last_write_checksum: sha1:33300f91738c9b79e41ea4d8f3581d6800ac06ef
+    pristine_git_object: 48824d543386df6c125ed86da32d85d24659454c
+  internal/provider/reflect/helpers.go:
+    id: 3c19b91a8408
+    last_write_checksum: sha1:3a2083aa9f84f5a54638803f2225daf86408d360
+    pristine_git_object: 8085789a770637a76b1728b0f89b30c564696ca6
+  internal/provider/reflect/interfaces.go:
+    id: d1096171c6f2
+    last_write_checksum: sha1:e03017ee98ee8d1bd64fde7a025975638bcfaed7
+    pristine_git_object: ff4416e40b7dd139a553979327b0dac70aff37c5
+  internal/provider/reflect/into.go:
+    id: 50e3644442fc
+    last_write_checksum: sha1:7a29c6e2fd31069faddc441132ff04a92a6198be
+    pristine_git_object: 29a437fe2bdb30a956b8c7668d11032962962472
+  internal/provider/reflect/map.go:
+    id: 0d8232fb373f
+    last_write_checksum: sha1:803a218b09d4d9de46d27a5c0227ed3fc6617f62
+    pristine_git_object: 91e27a6c1d51441d6091752a0e199c300c1f09dc
+  internal/provider/reflect/number.go:
+    id: f7e5eb196c35
+    last_write_checksum: sha1:ff756986a30b648c423b9af8996584ffc5983514
+    pristine_git_object: 53673b8476a3115f39f7ed03921221243bbe29a3
+  internal/provider/reflect/options.go:
+    id: ae46de5fdb32
+    last_write_checksum: sha1:735603671bc13388dca9edeb7fefc0b229196793
+    pristine_git_object: 002addd9ab508962b4dc80b0b1f788c738cb8382
+  internal/provider/reflect/outof.go:
+    id: 2b83f83dde82
+    last_write_checksum: sha1:46f09acf317888545161fc1cd288113bd3836ead
+    pristine_git_object: 215406a5867a4b5b6e0978a1664492049cc3738a
+  internal/provider/reflect/pointer.go:
+    id: b758e7c3bf1c
+    last_write_checksum: sha1:92cc23f30396e1a9204f70ac68ebfe7d58cbb967
+    pristine_git_object: 215653e7c5d5ba9863ef5053d9084c9d69eba5ca
+  internal/provider/reflect/primitive.go:
+    id: c302568a3411
+    last_write_checksum: sha1:8b7708414f8be915065952b31986869feaa2fae6
+    pristine_git_object: adf648e88b61a8234951db180e4c25bbb7c1b353
+  internal/provider/reflect/slice.go:
+    id: cd2dec5ab676
+    last_write_checksum: sha1:70ce36709e204b74e3ded36c4683df7e48df294f
+    pristine_git_object: 79ad6b80c2a9492522820c3060a89f2de1131e92
+  internal/provider/reflect/struct.go:
+    id: 973d7dbf96c1
+    last_write_checksum: sha1:504fa0ca7711df0887f8c265c7acb3774e89afe7
+    pristine_git_object: c588f768bd7b39be33962188f97d81e1c4c25f4b
+  internal/provider/target_data_source.go:
+    id: 3cf8adc2e3f6
+    last_write_checksum: sha1:50c5e10c7e21cc5c7c062ebd091d769e168034e5
+    pristine_git_object: 4ef1ceaae756070971968e04d4da5cbfadb039f5
+  internal/provider/target_data_source_sdk.go:
+    id: 4ab849379b2c
+    last_write_checksum: sha1:dcb771ec0ba6d64f2867aa99314f1d27cde4fbb7
+    pristine_git_object: 0d1c659dfc485e9d92ff9b31c7ddf2dbf358173c
+  internal/provider/target_resource.go:
+    id: ee5885aa261e
+    last_write_checksum: sha1:6faa65d2e6ffb65da67a417cd8ee3601db7b0950
+    pristine_git_object: d8531ca160da935a4b2dede3129d6479b67f3236
+  internal/provider/target_resource_sdk.go:
+    id: 2a8efbc9eaae
+    last_write_checksum: sha1:c8277c059ec619e4b80a41efbeda377dd8544f68
+    pristine_git_object: a2f4dec53195e4ffee47bc8c7b18bf3338667835
+  internal/provider/typeconvert/date.go:
+    id: dfe2bc95ad1b
+    last_write_checksum: sha1:23bc9408a3cfd018494ef380b173477d72064028
+    pristine_git_object: 1ab5fb2d819b56e4e4df48fc7f16890fa69f525e
+  internal/provider/typeconvert/datetime.go:
+    id: d2fb73d4f01c
+    last_write_checksum: sha1:a2a20e6785f1e12c3f94c016cbc106e54942e981
+    pristine_git_object: 7bfdc553a393a1db69a25574998eb6cc5df79566
+  internal/provider/typeconvert/int.go:
+    id: c44fcd78fccc
+    last_write_checksum: sha1:c28123f17006dc96a233f916a17c38408e37b71f
+    pristine_git_object: 54763e7a7555fae6d8bf51c4590220ff610202aa
+  internal/provider/types/base_entity_acl.go:
+    id: 6a3395c35ef0
+    last_write_checksum: sha1:2abeda17ccfac4ce16cc7f8162f3d333743d44b0
+    pristine_git_object: 0b8b55fb19d0e44eef7851418d41b873e14ee81f
+  internal/provider/types/base_relation.go:
+    id: 43f2b4426074
+    last_write_checksum: sha1:3acf4dee23c1e74b3185ba803fc614f6cb8febce
+    pristine_git_object: dd9acebc473577578f93ae8b7abe8499b102ffc9
+  internal/provider/types/dollar_relation.go:
+    id: 95e3505f9951
+    last_write_checksum: sha1:b1f385349b63798bc40f7e43f029149ad2f79007
+    pristine_git_object: 46ee392baf273222aa01f59afe77dddd47a0ef7f
+  internal/provider/utils.go:
+    id: 312d50f148af
+    last_write_checksum: sha1:15b30448e2bb8bb1c882ca782a5ef630c36e8406
+    pristine_git_object: f1e1d2f53342a4276829c2c61897e35cc182df69
+  internal/sdk/.gitattributes:
+    id: 1ea4c4e0a39d
+    last_write_checksum: sha1:84b0115789fc3ea52e31df701d8a27f76077e29f
+    pristine_git_object: e6a994416d0f527912d2d272e2583458f4fc9bcb
+  internal/sdk/docs/models/operations/option.md:
+    id: a35737eb2e35
+    last_write_checksum: sha1:b4958fa4f0819bc64ca2e10b3d85ae23b1af684b
+    pristine_git_object: 3b1f2826980be8594af1cabfdd606b43978e200e
+  internal/sdk/internal/config/sdkconfiguration.go:
+    id: 6af0bc8635d9
+    last_write_checksum: sha1:6c0870c28187c4ee8f4c681ae4635f81c1f64395
+    pristine_git_object: fb9beb9e48443c62e70519592d779f36e3295e1b
+  internal/sdk/internal/hooks/hooks.go:
+    id: 4e88208e997f
+    last_write_checksum: sha1:756648bb805d74af52137d602ca18c6f216ceccf
+    pristine_git_object: e16b17e518df0cc8e55663e4117ad0ad46db1297
+  internal/sdk/internal/utils/contenttype.go:
+    id: b767d5c02609
+    last_write_checksum: sha1:ab5cfd860d02c6e6a37f89e2b5649a9859947fb1
+    pristine_git_object: f6487e01eb987c0aa49e7aa50b5ff24830314c63
+  internal/sdk/internal/utils/env.go:
+    id: 4b4be1422b75
+    last_write_checksum: sha1:1e0bcb2d2caed9f3657f1dbc99b55811bed0298c
+    pristine_git_object: 110d464eacf2387b347bad1cb903666354a339e9
+  internal/sdk/internal/utils/form.go:
+    id: a29055426367
+    last_write_checksum: sha1:4a05c262f7e06ea4f9562a055693c86f7705feb7
+    pristine_git_object: 96c09163bcebbd99fb42a638cad43c9ec6285d22
+  internal/sdk/internal/utils/headers.go:
+    id: f035883ac0ff
+    last_write_checksum: sha1:89d89299c2ab16c51e62af0c4449be783cd40036
+    pristine_git_object: 6c21795cdb856d6d6b323df95989a32cf2855217
+  internal/sdk/internal/utils/json.go:
+    id: 2231afac3add
+    last_write_checksum: sha1:76b4919810374b629bb9fc96a5c8813471b4f67b
+    pristine_git_object: 5ae184275bf037ffc6139686d030d21e7680e634
+  internal/sdk/internal/utils/pathparams.go:
+    id: e7fec2afe4a6
+    last_write_checksum: sha1:fe240ec3178a4e3d43475165ed4bb8d135185dbc
+    pristine_git_object: e480872850229434a212d1e83d2a4ede7c709d9f
+  internal/sdk/internal/utils/queryparams.go:
+    id: fb88ad971185
+    last_write_checksum: sha1:e6dee5003cc6abae36c5d99b3d119b7c1fa2560e
+    pristine_git_object: ed0b51922f8dab8b6454e2a778e8a7140a6bfa08
+  internal/sdk/internal/utils/requestbody.go:
+    id: c971a8b3bbf5
+    last_write_checksum: sha1:88e7481eb759783f931a41cd6d6aa97578655497
+    pristine_git_object: 6e3f60d3ac6b32ceba1b9008456f421793d7ea6f
+  internal/sdk/internal/utils/retries.go:
+    id: 6832c2142453
+    last_write_checksum: sha1:ee844cbb3a088954d7234674e535873982b72219
+    pristine_git_object: 4ba7f4592cd6bad8724457d254f03c71072f8353
+  internal/sdk/internal/utils/security.go:
+    id: 6ebe9eaeb99b
+    last_write_checksum: sha1:49fee4e9252239953611e6de36f4682851499ab5
+    pristine_git_object: a2332ee8de013a2121880e4b7be332d3385c6f41
+  internal/sdk/internal/utils/union.go:
+    id: 183142835cfe
+    last_write_checksum: sha1:459fb2ebc0976c6b4115122d699f8a6978331b3b
+    pristine_git_object: 83808c45ae4f7863ca7990f0fce4c2038de5aa17
+  internal/sdk/internal/utils/union_test.go:
+    id: 4c885192f6f0
+    last_write_checksum: sha1:bd5c7506e1d6238117c1ac4e340314a5a41401b5
+    pristine_git_object: 138f7e2a066b10dffd0a9957ecfcab9e00dd26fe
+  internal/sdk/internal/utils/utils.go:
+    id: feefcdf75dbd
+    last_write_checksum: sha1:c03378176a107205b8938606faef3fd8fb8f91a0
+    pristine_git_object: a614e37673d3ea81eabc6139236edfb22a15dc55
+  internal/sdk/models/errors/sdkerror.go:
+    id: 19b5a8d3586b
+    last_write_checksum: sha1:5d65fce5049df7c5113e11c9ccb1e4c46b91901c
+    pristine_git_object: c633d568d96b5297c7d2edfc9d22fc717428edf1
+  internal/sdk/models/operations/createtarget.go:
+    id: df6a6da48674
+    last_write_checksum: sha1:da3ff772fa978d26751818a45eab7c3bfa694848
+    pristine_git_object: ef0e7e78ec906b3e3c95be105df683ca4a271efc
+  internal/sdk/models/operations/deletetarget.go:
+    id: 8eaac20ae426
+    last_write_checksum: sha1:43c38316307e1cd93756276a4461c8c77c21e687
+    pristine_git_object: 6e433b21f3905296bee2645b6f4f04b6a326abf6
+  internal/sdk/models/operations/gettarget.go:
+    id: f2bf68a7601f
+    last_write_checksum: sha1:5d440a8b42191281e2e606a3d35f8b72b9d4d705
+    pristine_git_object: e52f45b9036418554c226e87846960ad2343e426
+  internal/sdk/models/operations/options.go:
+    id: 6d0d29414e00
+    last_write_checksum: sha1:fb18297912763c6a0a9a889fa7a0ce1283497c07
+    pristine_git_object: 8ced3c3f057a6e5294f83f291d4665df16ff2b18
+  internal/sdk/models/operations/patchtarget.go:
+    id: 2f118275043a
+    last_write_checksum: sha1:38e7951bf18066a7d5601245db55b3c6a38f701c
+    pristine_git_object: b5f94d5dedeabe7d22aba32629dbf12fd3e15a56
+  internal/sdk/models/operations/updatetarget.go:
+    id: b257e6073935
+    last_write_checksum: sha1:241d22a5931a58d7e1c088847aee471516e4118a
+    pristine_git_object: 4a49fdbdb6feb8933233b6e45b42afd017db9e09
+  internal/sdk/models/shared/baseentityacl.go:
+    id: 5d4ffc565451
+    last_write_checksum: sha1:a5c1cded2d75164ba62efb7644657c138be0ce9d
+    pristine_git_object: 2ca93dc4f3ae6af27d109a5844089ec19448123b
+  internal/sdk/models/shared/baserelation.go:
+    id: 229735e3dfa4
+    last_write_checksum: sha1:986238c18fc48e6cd758f0c553ad70025082cfd7
+    pristine_git_object: b4d17cfb3a91c08b726133f573ddf7fa520f782c
+  internal/sdk/models/shared/clienterror.go:
+    id: df6ef9eb0b02
+    last_write_checksum: sha1:6d0ff174aaf5cb245fd0c24f90f0d7d156ace2ea
+    pristine_git_object: 58edbaaa8d0b873480299faef4105090bed49551
+  internal/sdk/models/shared/security.go:
+    id: 9098af98367e
+    last_write_checksum: sha1:e8e31b606a77714313987210c34abcc8924489c8
+    pristine_git_object: d393ff12dbea8bb4babdc7dcb591ab9f4ec30bb0
+  internal/sdk/models/shared/target.go:
+    id: 28dabbb6ef44
+    last_write_checksum: sha1:fe7bb67a9d4cb94fb4de832a2c19df8558ff6706
+    pristine_git_object: 00484f3912016167fa154775b9aeaf68ebc1f7d5
+  internal/sdk/models/shared/targetcreate.go:
+    id: 0d7d45962887
+    last_write_checksum: sha1:9c78b12c507d09abf39ef01ac2f8fd34e625c068
+    pristine_git_object: 1320722f7c266a0ced2d7cd286bb73dcd87a37cb
+  internal/sdk/models/shared/targetpatch.go:
+    id: 30d6ea9a02e0
+    last_write_checksum: sha1:cc6cdfe7d41eb6292700f78cb6afc284671f9ff8
+    pristine_git_object: c64247d5404e1e341b2edf1b92f0df75eb968789
+  internal/sdk/optionalnullable/optionalnullable.go:
+    id: 4b83aa3f3df3
+    last_write_checksum: sha1:d6aff1a420c31e025ea21d46cf056e305ae76fe8
+    pristine_git_object: c6739be0619b6726565e0f11855ffe44b0e5607e
+  internal/sdk/optionalnullable/optionalnullable_test.go:
+    id: 3920a41dfc4c
+    last_write_checksum: sha1:2e9433eff1651ac77d6678ea76880d9a4980cbc2
+    pristine_git_object: e6e5a01c6e721e879e24a38a1f97e3e27d4686d4
+  internal/sdk/retry/config.go:
+    id: 7ea5fa9128b6
+    last_write_checksum: sha1:102d1953fbd7e9f312c4442c71ccca2eaaeaa27d
+    pristine_git_object: 767002c7898128324d8741ce9c534bd466492169
+  internal/sdk/sdk.go:
+    id: 02d7190ee502
+    last_write_checksum: sha1:aa1592764086b7853787208af1e0659024898240
+    pristine_git_object: 7a72996ac63ccf4077b043845686c1befb947ded
+  internal/sdk/target.go:
+    id: d95eb96e2dc5
+    last_write_checksum: sha1:5707078df5aecf8f55dd3bbb229d56f7337609c0
+    pristine_git_object: d38edca49bd3be86d8d0e77e42d5bcdeaa99f703
+  internal/sdk/types/bigint.go:
+    id: fc530b70337e
+    last_write_checksum: sha1:49b004005d0461fb04b846eca062b070b0360b31
+    pristine_git_object: 9c6a086d51595888a6ff787ebcb8693559afee95
+  internal/sdk/types/date.go:
+    id: c4bff082c66f
+    last_write_checksum: sha1:3036a2e1ed15a1d484c093367eba000c38f384d0
+    pristine_git_object: 5b2782f219efe6bfbce46fc2dec68998eb759438
+  internal/sdk/types/datetime.go:
+    id: a8109857c712
+    last_write_checksum: sha1:196d050af6450669214e9ae4fd28e56263ae2b5d
+    pristine_git_object: 3eff332daa04e34cec5ffb10add670bafd8ac454
+  internal/sdk/types/pointers.go:
+    id: 2f3f971639f6
+    last_write_checksum: sha1:fc2275ea006257ba9ba4ff6f2a2cdb6205371eef
+    pristine_git_object: 35c439d2661e08fcb6a854096fd7b9a8561b3938
+  internal/validators/DateValidator.go:
+    id: 4fdfa187ab97
+    last_write_checksum: sha1:e4dee2d0efbe8bc59b7de977e60fa324b4ffbf27
+    pristine_git_object: 5b108727cf9c8aa86e6d55777afb633ca13c0110
+  internal/validators/ExactlyOneChild.go:
+    id: 66e7bd50b47d
+    last_write_checksum: sha1:ab8e18d1763fbd5b262c3e7d917c81ac40ba839f
+    pristine_git_object: 1765a3a0b83d38a6cc8f118ea2cfab67ab44c910
+  internal/validators/JSONParseValidator.go:
+    id: ce72f37482f5
+    last_write_checksum: sha1:77af551821798350f868410aab90352f7ec7b370
+    pristine_git_object: b8bb96b5e0930635eb754f169b3eaf285d48dd1c
+  internal/validators/RFC3339Validator.go:
+    id: 0cf126c9a956
+    last_write_checksum: sha1:8d9accfc3aa477a74b0f927652f5e2ae3d28061d
+    pristine_git_object: f5e61466b5c639cb17d0cb2cfe28611957297ce9
+  internal/validators/boolvalidators/not_null.go:
+    id: 865145e65396
+    last_write_checksum: sha1:89a7362be9d519ed7c9fb7c4989d273a3aa5f279
+    pristine_git_object: 6eca17e0cff87f7682f8baa2cd81cd33bc972f4c
+  internal/validators/float32validators/not_null.go:
+    id: 330748f4ff91
+    last_write_checksum: sha1:4f0a859aa9d7348056c6559bad9ca336104beaef
+    pristine_git_object: c9a8973c7dc830b9c5aac546ea7cbe6021f01629
+  internal/validators/float64validators/not_null.go:
+    id: 8f5e6362f0f5
+    last_write_checksum: sha1:f2436a4a1323d58ffcff3b153167c4e463325c12
+    pristine_git_object: 8f786d278597ffac3c525755e429c9a3caa60b20
+  internal/validators/int32validators/not_null.go:
+    id: ea876d1f8b07
+    last_write_checksum: sha1:d08335af46ab809d0076da8543b3455662fb66a0
+    pristine_git_object: ec9a3f10adfdd29c3cca40e53dc42db329cf37d7
+  internal/validators/int64validators/not_null.go:
+    id: d3f822eb4c69
+    last_write_checksum: sha1:b5bf5b539f2631813ee8771cf00d8ea9744c6dd3
+    pristine_git_object: 707ff9573f026b7b7ee3f59462c7a8ba10a1aba9
+  internal/validators/listvalidators/not_null.go:
+    id: b3ee156dafa7
+    last_write_checksum: sha1:11f33dfa3cb1b9eadc7e4a8287518135ddae191e
+    pristine_git_object: 9b88e520b7d58c14c6844d3dbc26ce4f96d39af1
+  internal/validators/mapvalidators/not_null.go:
+    id: 9cff80d0791c
+    last_write_checksum: sha1:64117afe6cdb1a0e1b57df970da8df0e18d10442
+    pristine_git_object: dc6959e9cdadb16e0e1ea90f98b2d27f2d357b64
+  internal/validators/numbervalidators/not_null.go:
+    id: b335c948bcf4
+    last_write_checksum: sha1:54d925f13a630f21e14709ce6181e5eaf96bd6e3
+    pristine_git_object: 57d4da0ae000f671698384abc550196744884871
+  internal/validators/objectvalidators/not_null.go:
+    id: dd14631b3a38
+    last_write_checksum: sha1:5f897f5dcd2686d43c9bd683900572a8d7ef6473
+    pristine_git_object: bf0189497acb3b1214f2480e9db071186d85ecad
+  internal/validators/setvalidators/not_null.go:
+    id: e612a6618fac
+    last_write_checksum: sha1:de772bcb14615735a8ebd2a9ffaae06f464a86d5
+    pristine_git_object: f859d64810168dd4ec7bfb1ea1c0186c551f8987
+  internal/validators/stringvalidators/not_null.go:
+    id: 80be7ffedf6c
+    last_write_checksum: sha1:df498b49dd87f9508f3eaec3a63ed0a08ae3c16e
+    pristine_git_object: 1e40ac1b6ce68540327e01910f0dc91a60b62607
+  main.go:
+    id: 0607f785dfa3
+    last_write_checksum: sha1:08902dd5499b9afb97f39cc324322c53f3137d32
+    pristine_git_object: d8932a9ce3608e9246559b30acfe9c59a30eac6d
+  terraform-registry-manifest.json:
+    id: fc3d63fd06e1
+    last_write_checksum: sha1:45b609f3f65164bc2f00b6e2b24faf64627e15b8
+    pristine_git_object: fec2a5691e493a1941bd79b312b3925403a91aa6
+  tools/tools.go:
+    id: 683390d33800
+    last_write_checksum: sha1:8239addbb5e66af0488adc7dc4aba098e4634d88
+    pristine_git_object: 36b25801b3a26b57ee042a610a3c35ca65b1376a
 examples:
   createCoupon:
     speakeasy-default-create-coupon:
@@ -1797,3 +2207,134 @@ examples:
           application/json: {"message": "Entity not found", "status": 404}
 examplesVersion: 1.0.2
 generatedTests: {}
+releaseNotes: |
+  ## Terraform SDK Changes:
+  * `SDK.Target.createTarget()`: **Added**
+  * `SDK.Target.deleteTarget()`: **Added**
+  * `SDK.Target.getTarget()`: **Added**
+  * `SDK.Target.patchTarget()`: **Added**
+  * `SDK.Target.updateTarget()`: **Added**
+  * `SDK.Coupon.createCoupon()`: **Removed** (Breaking ⚠️)
+  * `SDK.Coupon.deleteCoupon()`: **Removed** (Breaking ⚠️)
+  * `SDK.Coupon.getCoupon()`: **Removed** (Breaking ⚠️)
+  * `SDK.Coupon.patchCoupon()`: **Removed** (Breaking ⚠️)
+  * `SDK.Coupon.updateCoupon()`: **Removed** (Breaking ⚠️)
+  * `SDK.Price.createPrice()`: **Removed** (Breaking ⚠️)
+  * `SDK.Price.deletePrice()`: **Removed** (Breaking ⚠️)
+  * `SDK.Price.getPrice()`: **Removed** (Breaking ⚠️)
+  * `SDK.Price.patchPrice()`: **Removed** (Breaking ⚠️)
+  * `SDK.Price.updatePrice()`: **Removed** (Breaking ⚠️)
+  * `SDK.Product.createProduct()`: **Removed** (Breaking ⚠️)
+  * `SDK.Product.deleteProduct()`: **Removed** (Breaking ⚠️)
+  * `SDK.Product.getProduct()`: **Removed** (Breaking ⚠️)
+  * `SDK.Product.patchProduct()`: **Removed** (Breaking ⚠️)
+  * `SDK.Product.updateProduct()`: **Removed** (Breaking ⚠️)
+  * `SDK.Tax.createTax()`: **Removed** (Breaking ⚠️)
+  * `SDK.Tax.deleteTax()`: **Removed** (Breaking ⚠️)
+  * `SDK.Tax.getTax()`: **Removed** (Breaking ⚠️)
+  * `SDK.Tax.patchTax()`: **Removed** (Breaking ⚠️)
+  * `SDK.Tax.updateTax()`: **Removed** (Breaking ⚠️)
+generatedFiles:
+  - .gitattributes
+  - USAGE.md
+  - examples/README.md
+  - examples/data-sources/epilot-target_target/data-source.tf
+  - examples/provider/provider.tf
+  - examples/resources/epilot-target_target/import-by-string-id.tf
+  - examples/resources/epilot-target_target/import.sh
+  - examples/resources/epilot-target_target/resource.tf
+  - go.mod
+  - go.sum
+  - internal/planmodifiers/boolplanmodifier/suppress_diff.go
+  - internal/planmodifiers/float32planmodifier/suppress_diff.go
+  - internal/planmodifiers/float64planmodifier/suppress_diff.go
+  - internal/planmodifiers/int32planmodifier/suppress_diff.go
+  - internal/planmodifiers/int64planmodifier/suppress_diff.go
+  - internal/planmodifiers/listplanmodifier/suppress_diff.go
+  - internal/planmodifiers/mapplanmodifier/suppress_diff.go
+  - internal/planmodifiers/numberplanmodifier/suppress_diff.go
+  - internal/planmodifiers/objectplanmodifier/suppress_diff.go
+  - internal/planmodifiers/setplanmodifier/suppress_diff.go
+  - internal/planmodifiers/stringplanmodifier/suppress_diff.go
+  - internal/planmodifiers/utils/state_check.go
+  - internal/provider/provider.go
+  - internal/provider/reflect/diags.go
+  - internal/provider/reflect/doc.go
+  - internal/provider/reflect/generic_attr_value.go
+  - internal/provider/reflect/helpers.go
+  - internal/provider/reflect/interfaces.go
+  - internal/provider/reflect/into.go
+  - internal/provider/reflect/map.go
+  - internal/provider/reflect/number.go
+  - internal/provider/reflect/options.go
+  - internal/provider/reflect/outof.go
+  - internal/provider/reflect/pointer.go
+  - internal/provider/reflect/primitive.go
+  - internal/provider/reflect/slice.go
+  - internal/provider/reflect/struct.go
+  - internal/provider/target_data_source.go
+  - internal/provider/target_data_source_sdk.go
+  - internal/provider/target_resource.go
+  - internal/provider/target_resource_sdk.go
+  - internal/provider/typeconvert/date.go
+  - internal/provider/typeconvert/datetime.go
+  - internal/provider/typeconvert/int.go
+  - internal/provider/types/base_entity_acl.go
+  - internal/provider/types/base_relation.go
+  - internal/provider/types/dollar_relation.go
+  - internal/provider/utils.go
+  - internal/sdk/.gitattributes
+  - internal/sdk/docs/models/operations/option.md
+  - internal/sdk/internal/config/sdkconfiguration.go
+  - internal/sdk/internal/hooks/hooks.go
+  - internal/sdk/internal/utils/contenttype.go
+  - internal/sdk/internal/utils/env.go
+  - internal/sdk/internal/utils/form.go
+  - internal/sdk/internal/utils/headers.go
+  - internal/sdk/internal/utils/json.go
+  - internal/sdk/internal/utils/pathparams.go
+  - internal/sdk/internal/utils/queryparams.go
+  - internal/sdk/internal/utils/requestbody.go
+  - internal/sdk/internal/utils/retries.go
+  - internal/sdk/internal/utils/security.go
+  - internal/sdk/internal/utils/utils.go
+  - internal/sdk/models/errors/sdkerror.go
+  - internal/sdk/models/operations/createtarget.go
+  - internal/sdk/models/operations/deletetarget.go
+  - internal/sdk/models/operations/gettarget.go
+  - internal/sdk/models/operations/options.go
+  - internal/sdk/models/operations/patchtarget.go
+  - internal/sdk/models/operations/updatetarget.go
+  - internal/sdk/models/shared/baseentityacl.go
+  - internal/sdk/models/shared/baserelation.go
+  - internal/sdk/models/shared/clienterror.go
+  - internal/sdk/models/shared/security.go
+  - internal/sdk/models/shared/target.go
+  - internal/sdk/models/shared/targetcreate.go
+  - internal/sdk/models/shared/targetpatch.go
+  - internal/sdk/retry/config.go
+  - internal/sdk/sdk.go
+  - internal/sdk/target.go
+  - internal/sdk/types/bigint.go
+  - internal/sdk/types/date.go
+  - internal/sdk/types/datetime.go
+  - internal/sdk/types/decimal.go
+  - internal/sdk/types/pointers.go
+  - internal/validators/DateValidator.go
+  - internal/validators/ExactlyOneChild.go
+  - internal/validators/JSONParseValidator.go
+  - internal/validators/RFC3339Validator.go
+  - internal/validators/boolvalidators/not_null.go
+  - internal/validators/float32validators/not_null.go
+  - internal/validators/float64validators/not_null.go
+  - internal/validators/int32validators/not_null.go
+  - internal/validators/int64validators/not_null.go
+  - internal/validators/listvalidators/not_null.go
+  - internal/validators/mapvalidators/not_null.go
+  - internal/validators/numbervalidators/not_null.go
+  - internal/validators/objectvalidators/not_null.go
+  - internal/validators/setvalidators/not_null.go
+  - internal/validators/stringvalidators/not_null.go
+  - main.go
+  - terraform-registry-manifest.json
+  - tools/tools.go
